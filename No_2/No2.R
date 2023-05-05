@@ -40,7 +40,7 @@ sprintf("Standar Deviasi = %f\n", sqrt(lambda*t))
 #Histogram
 #Sebagai contoh
 x = 0:20
-plot(dpois(x, lambda*t), type = "h", lwd = 2,
+plot(x, dpois(x, lambda*t), type = "h", lwd = 2,
      main = "Distribusi banyak kematian pekerja akibat kanker tulang",
      ylab = "P(X = x)", xlab = "Banyak kematian")
 
@@ -55,5 +55,4 @@ hist(prob_dist)
 data %>% group_by(prob_dist) %>% count(prob_dist)
 
 #Poin h
-#Dari simulasi 10000 sampel acak dengan probabilitas sesuai distribusi poison untuk jumlah kematian 0-20
-#Dibuktikan bahwa jumlah kematian yang paling mungkin terjadi adalah 1, 2, 0, dan 3 dengan untuk jumlah kematian 5 ke atas lebih tidak mungkin.
+#Dari simulasi 10000 sampel acak dengan probabilitas sesuai distribusi poison p(x;1,8) untuk jumlah kematian 0-20, dibuktikan bahwa jumlah kematian yang paling mungkin terjadi adalah 0 - 4 dengan untuk kemungkinan jumlah kematian 5 ke atas dibawah 1%.
