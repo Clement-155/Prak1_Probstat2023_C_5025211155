@@ -17,6 +17,8 @@ Maka, karena **p** adalah probabilitas untuk 1 bayi sedangkan terdapat lebih dar
     - n = Jumlah percobaan (10)
     - p = Probabilitas bayi baru lahir berjenis kelamin laki-laki
 
+![ScreenShot](Screenshots/1-1.JPG)
+
 ### b. Berapa probabilitas bahwa tepat tiga bayi di antaranya berjenis kelamin laki-laki?
 - Dit : Nilai dari **P(X = 3)**. 
 
