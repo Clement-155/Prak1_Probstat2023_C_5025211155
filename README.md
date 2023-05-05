@@ -54,13 +54,15 @@ pbinom(q,                 # Quantile or vector of quantiles
 Maka, jawaban bisa ditemukan menggunakan fungsi `pbinom` yang mengembalikan nilai **P(X <= x)**.
 Akan dihitung **P(X >= 3) = 1 - P(X <= 2)**
 
+![ScreenShot](Screenshots/1-2.JPG)
+
 ### e. Berapa nilai harapan dan simpangan baku banyak bayi laki-laki?
 
 - Diketahui μ = np and σ^2 = npq
     - μ = Rata-rata
     - σ^2 = Varians
 
-Maka, karena nilai harapan adalah rata-rata, bisa ditemukan nilai keduanya sebagai berikut :
+Maka, karena nilai harapan adalah rata-rata, bisa ditemukan nilai keduanya seperti di gambar di bawah.
 
 
 ### f. Gambarkan histogram pendistribusian banyak bayi laki-laki.
@@ -74,6 +76,8 @@ Argumen :
 - type : Jenis plot, `h` berarti histogram.
 - lwd : Line width.
 - main, ylab, xlab : Judul plot, sumbu y, dan sumbu x.
+
+![ScreenShot](Screenshots/1-3.JPG)
 ___
 # 2. Misalkan banyak kematian karena kanker tulang untuk seluruh pekerja di pabrik ban dalam 20 tahun ke depan adalah 1,8.
 
@@ -86,6 +90,8 @@ Untuk **X = Variabel random jumlah kematian pekerja pabrik ban karena kanker tul
 - Nilai dalam soal ini
     - t = `20` (20 tahun).
     - λ = **1,8/20** = `0,09` (Jumlah kematian **per tahun**) 
+
+![ScreenShot](Screenshots/2-1.JPG)
 ### b. Ada 4 kematian akibat kanker tulang yang dilaporkan di kalangan pekerja pabrik ban, apakah itu peristiwa yang tidak biasa? Hitung probabilitas berdasarkan distribusi yang telah dipilih.
 
 - Dit : Nilai dari **P(X = 4)**. 
@@ -117,10 +123,13 @@ ppois(q,                 # Quantile or vector of quantiles
 
 Maka, jawaban bisa ditemukan menggunakan fungsi `ppois`. **Akan digunakan x = 4** dengan `lower.tail = false` untuk memberi nilai **P(X > x**).
 
+![ScreenShot](Screenshots/2-2.JPG)
+
 ### e. Berdasarkan distribusi yang telah dipilih, berapakah nilai harapan dan standar deviasi banyak kematian akibat kanker tulang untuk pekerja pabrik ban?
 - **Rata-rata dan varians** dari distribusi poisson **p(x; λt)** adalah **λt**.
 
 Maka bisa ditemukan nilai harapan (rata-rata) dan standar deviasi sebagai berikut :
+![ScreenShot](Screenshots/2-3.JPG)
 ### f. Gambarkan histogram pendistribusian banyak banyak kematian akibat kanker tulang untuk pekerja pabrik ban.
 ```
 x = 0:20
@@ -134,6 +143,8 @@ Argumen :
 - type : Jenis plot, `h` berarti histogram.
 - lwd : Line width.
 - main, ylab, xlab : Judul plot, sumbu y, dan sumbu x.
+
+![ScreenShot](Screenshots/2-4.JPG)
 ___
 ### g. Gunakan simulasi untuk memeriksa hasil sebelumnya.
 ```
@@ -158,6 +169,7 @@ Dari simulasi 10000 sampel acak dengan probabilitas sesuai distribusi poison p(x
 
 Hal ini berarti hasil simulasi sesuai dengan no 2d.
 
+![ScreenShot](Screenshots/2-5.JPG)
 # 3. Diketahui nilai x = 3 dan v = 10. Tentukan:
 ### a. Fungsi probabilitas dari distribusi Chi-Square.
 - Dik :
@@ -200,6 +212,7 @@ hist(x,
 - Diketahui μ = v and σ^2 = 2v.
 
 Maka kedua nilai tersebut bisa dihitung sebagai berikut :
+![ScreenShot](Screenshots/5-3.JPG)
 
 # 4. Diketahui data bangkitan acak sebanyak 100 dengan mean = 45 dan sd = 5. Tentukan:
 Untuk menghasilkan data acak yang berdistribusi normal dengan **mean** dan **standar deviasi** tertentu, akan digunakan fungsi sebagai berikut :
@@ -237,7 +250,7 @@ plot(randObs, #Hasil bangkitan acak
  ylim = c(0, 0.15), #Batas bawah dan atas sumbu y
  ylab = "", lwd = 2, col = "red") #Warna dan lebar garis
 ```
-
+![ScreenShot](Screenshots/4-1.JPG)
 ### b. Gambarkan histogram dari distribusi Normal dengan breaks 50
 
 Soal ini bisa diselesaikan menggunakan fungsi `hist`.
@@ -246,7 +259,7 @@ Soal ini bisa diselesaikan menggunakan fungsi `hist`.
 - *The mean and variance of n(x; μ, σ) are μ and σ^2, respectively. Hence, the standard deviation is σ.*
 
 Maka, varians bisa dihitung sebagai sd^2.
-
+![ScreenShot](Screenshots/4-2.JPG)
 # 5. Kerjakanlah menggunakan distribusi T-Student.
 Dalam pengerjaannya, akan digunakan fungsi `pt` dan `qt`. 
 - `pt(x, df, lower.tail = FALSE) ` = Mengembalikan area dikiri nilai x.
@@ -259,12 +272,15 @@ Dalam pengerjaannya, akan digunakan fungsi `pt` dan `qt`.
 - Dit = Area untuk (x < -1,23  DAN x > 1,23) dengan v = 3.
 ### d. Berapa probabilitas terjadinya suatu peristiwa acak X berada di antara -0,94 dan 0,94 dengan 14 derajat kebebasan?
 - Dit = Area untuk (-0,94 < x < 0,94) dengan v = 14.
+
+![ScreenShot](Screenshots/5-1.JPG)
 ### e. Berapa nilai t-score dengan 5 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di sebelah kiri t-score tersebut?
 - Dit = Nilai y untuk a = 0,0333 dengan (x < y) dan v = 5.
 ### f. Berapa nilai t-score dengan 25 derajat kebebasan yang memiliki luasan 0,125 satuan persegi di bawah kurva dan di sebelah kanan t-score tersebut?
 - Dit = Nilai y untuk a = 0,125 dengan (x > y)  dan v = 25.
 ### g. Berapa nilai t-score dengan 11 derajat kebebasan yang memiliki luasan 0,75 satuan persegi di bawah kurva dan di antara t-score tersebut dan negatif dari nilai t-score tersebut?
 - Dit = Nilai y untuk a = 0,75 dengan (-y < x < y) dan v = 11.
-
 ### h. Berapa nilai t-score dengan 23 derajat kebebasan yang memiliki luasan 0,0333 satuan persegi di bawah kurva dan di luar interval antara t-score tersebut dan negatif dari nilai t-score tersebut?
 - Dit = Nilai y untuk a = 0,0333 dengan (x < -y,23  DAN x > y) dan v = 23.
+
+![ScreenShot](Screenshots/5-2.JPG)
